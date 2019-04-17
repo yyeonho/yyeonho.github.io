@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>BATTLEGROUNDS GUNS</title>
+<script>
+
+function genre(obj) {
+var gun_a = ["Groza", "AKM", "AUG", "QBZ", "M416", "SCAR-L", "M16A4"];
+
+var gun_b = ["AWM", "Kar98K", "M24", "WIN94"];
+
+var gun_c = ["MK14", "SLR", "SKS", "Mini14", "VSS"];
+
+var gun_d = ["Tommy Gun", "Vector", "UMP9", "Micro UZI"];
+
+var gun_e = ["S686", "S1897", "S12K"];
+
+var target = document.getElementById("gunx");
+ if(obj.value == "a") var k = gun_a;
+else if(obj.value == "b") var k = gun_b;
+else if(obj.value == "c") var k = gun_c;
+else if(obj.value == "d") var k = gun_d;
+else if(obj.value == "e") var k = gun_e;
+ 
+  target.options.length = 0;
+
+  for (x in k) {
+    var opt = document.createElement("option");
+    opt.value = k[x];
+    opt.innerHTML = k[x];
+    target.appendChild(opt);
+    }
+    }
+    </script>
+
+</head>
+<body>
+<section>
+<fieldset>
+<legend>배틀그라운드 총</legend>
+<label for="genrex">총기종류</label>
+<select id="genrex" name="gungenre" onchange ="genre(this)">
+<option value="a"selected>AR</option>
+<option value="b">SR</option>
+<option value="c">DMR</option>
+<option value="d">SMG</option>
+<option value="e">SG</option>
+</select>
+<label for="gun">총기종류</label>
+<select id="gunx" name="gun"></select>
+</fieldset>
+</section>
+</body>
+</html>
+
