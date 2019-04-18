@@ -8,7 +8,7 @@
  <body>
   <section><form action="https://jsptogo.herokuapp.com/jspsrc/reservation1.jsp" method="post">
   <fieldset><legend>예약자 정보</legend>
-  <label for="namex">이름:</label>
+  <label for="datex">이름:</label>
   <input type="text" id="namex" name="namex"/><br/>
   <label for="numberx">휴대전화</label>
   <input type="tel" id="numberx" name="numberx" placeholder="00*-000*-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"/><br/>
@@ -17,9 +17,9 @@
   </fieldset>
   <fieldset><legend>약속날짜 시간 입력</legend>
   <label for="datex">날짜 : </label>
-  <input type="text" id="datex" name="datex"/><br/>
+  <input type="date" id="datex" name="datex"/><br/>
   <label for="timex">시간 : </label>
-  <input type="time" id="timex" name="timex"/><br/>
+  <input type="time" id="times" name="timex"/><br/>
   </fieldset>
   <button type="submit">입력</button>
   <input type="reset" name="reset1" value="취소"/>
